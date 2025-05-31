@@ -1,0 +1,86 @@
+start-at-login = true
+after-login-command = []
+after-startup-command = ['exec-and-forget borders']
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+accordion-padding = 20
+
+[gaps]
+inner.horizontal = 10
+inner.vertical   = 10
+outer.left       =  7
+outer.right      =  7
+outer.bottom     =  7
+outer.top        =  7
+
+[mode.main.binding]
+shift-ctrl-alt-q = 'close --quit-if-last-window'
+shift-ctrl-alt-w = 'focus-back-and-forth'
+
+shift-ctrl-alt-enter = '''exec-and-forget osascript ~/.config/aerospace/ghostty.scpt'''
+shift-ctrl-alt-cmd-enter = '''exec-and-forget osascript ~/.config/aerospace/safari.scpt'''
+
+shift-ctrl-alt-f = 'fullscreen'
+shift-ctrl-alt-cmd-f = 'join-with right'
+shift-ctrl-alt-x = 'layout tiles horizontal vertical'
+shift-ctrl-alt-cmd-x = 'layout accordion horizontal vertical'
+
+shift-ctrl-alt-h = 'focus left'
+shift-ctrl-alt-j = 'focus down'
+shift-ctrl-alt-k = 'focus up'
+shift-ctrl-alt-l = 'focus right'
+
+shift-ctrl-alt-cmd-h = 'move left'
+shift-ctrl-alt-cmd-j = 'move down'
+shift-ctrl-alt-cmd-k = 'move up'
+shift-ctrl-alt-cmd-l = 'move right'
+
+shift-ctrl-alt-1 = 'workspace 1'
+shift-ctrl-alt-2 = 'workspace 2'
+shift-ctrl-alt-3 = 'workspace 3'
+shift-ctrl-alt-4 = 'workspace 4'
+shift-ctrl-alt-5 = 'workspace 5'
+shift-ctrl-alt-6 = 'workspace 6'
+shift-ctrl-alt-7 = 'workspace 7'
+shift-ctrl-alt-8 = 'workspace 8'
+shift-ctrl-alt-9 = 'workspace 9'
+shift-ctrl-alt-0 = 'workspace 10'
+
+shift-ctrl-alt-cmd-1 = 'move-node-to-workspace 1'
+shift-ctrl-alt-cmd-2 = 'move-node-to-workspace 2'
+shift-ctrl-alt-cmd-3 = 'move-node-to-workspace 3'
+shift-ctrl-alt-cmd-4 = 'move-node-to-workspace 4'
+shift-ctrl-alt-cmd-5 = 'move-node-to-workspace 5'
+shift-ctrl-alt-cmd-6 = 'move-node-to-workspace 6'
+shift-ctrl-alt-cmd-7 = 'move-node-to-workspace 7'
+shift-ctrl-alt-cmd-8 = 'move-node-to-workspace 8'
+shift-ctrl-alt-cmd-9 = 'move-node-to-workspace 9'
+shift-ctrl-alt-cmd-0 = 'move-node-to-workspace 10'
+
+cmd-h = []
+cmd-alt-h = []
+
+shift-ctrl-alt-c = 'mode resize'
+
+[mode.resize.binding]
+enter = 'mode main'
+esc = 'mode main'
+r = 'reload-config'
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
